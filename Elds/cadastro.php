@@ -95,15 +95,19 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_FILES['foto']) && $_FILES['f
 <body>
     <div class="container">
         <?php if(empty($redirect)):?>
-            <form action="" method="POST" enctype="multipart/form-data">
+            <form class="grid" action="" method="POST" enctype="multipart/form-data">
+                <div class="text">
+                    <img class="logo" src="./img/logoElds.png" alt="">
+                    <p>Cadastro-Page</p>
+                </div>
                 <div class="img-perfil">   
                     <img src="./img/Foto vazia.jpg" alt="Sem foto" id="foto-vazia" class="img-vazia">
                     <input type="file" name="foto" id="foto-perfil" accept="image/*" onchange="previaImg()" hidden>
-                    <label for="foto-perfil"><svg class="icone-foto" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M3 4V1h2v3h3v2H5v3H3V6H0V4zm3 6V7h3V4h7l1.83 2H21c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H5c-1.1 0-2-.9-2-2V10zm7 9c2.76 0 5-2.24 5-5s-2.24-5-5-5s-5 2.24-5 5s2.24 5 5 5m-3.2-5c0 1.77 1.43 3.2 3.2 3.2s3.2-1.43 3.2-3.2s-1.43-3.2-3.2-3.2s-3.2 1.43-3.2 3.2"/></svg></label>
+                    <label class="cam" for="foto-perfil"><svg class="icone-foto" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M3 4V1h2v3h3v2H5v3H3V6H0V4zm3 6V7h3V4h7l1.83 2H21c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H5c-1.1 0-2-.9-2-2V10zm7 9c2.76 0 5-2.24 5-5s-2.24-5-5-5s-5 2.24-5 5s2.24 5 5 5m-3.2-5c0 1.77 1.43 3.2 3.2 3.2s3.2-1.43 3.2-3.2s-1.43-3.2-3.2-3.2s-3.2 1.43-3.2 3.2"/></svg></label>
                 </div>
                 <?php if(!empty($mensagem)): ?>
-                <div>
-                    <p class="<?php echo $classe ?>"><?php echo $mensagem ?></p>
+                <div class="errado">
+                    <p class=""><?php echo $mensagem ?></p>
                 </div>
                 <?php endif; ?>
                 <div class="info-cad">
@@ -117,14 +121,15 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_FILES['foto']) && $_FILES['f
                         Senha:<input type="password" name="senha" id="senha">
                     </div>
                     <div class="input-cad">
-                        Confirmar Senha:<input type="password" name="confirmar-senha" id="confirmar-senha">
+                        Confirmar <br> Senha
+                        <input type="password" name="confirmar-senha" id="confirmar-senha">
                     </div>
                 </div>
-                <div>
-                    <button type="submit">Cadastrar</button>
+                <div class="div-bot">
+                    <button class="bot" type="submit">Cadastrar</button>
                 </div>
-                <div>
-                    <a href="./login.php">Já tenho login? Clique aqui</a>
+                <div class="link">
+                    Já tenho login? <a href="./login.php">Clique aqui</a>
                 </div>
             </form>
         <?php else: ?>

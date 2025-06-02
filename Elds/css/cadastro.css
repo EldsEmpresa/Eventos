@@ -19,14 +19,103 @@ body{
 }
 .container{
     width: 25%;
-    height: 50%;
+    height: 70%;
     justify-content: center;
     align-items: center;
     background-color: rgb(252, 252, 252);
     box-shadow: 10px 10px 30px  rgb(138, 138, 138);
     border-radius: 20px;
 }
+.grid{
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 10% 20% 10% 40% 10% 10%;
+    justify-items: center;
+    align-items: center;
+}
+.text{
+    grid-area: 1/1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+}
+.logo{
+    height: 50px;
+    width: 50px;
+}
+.img-perfil{
+    grid-area: 2/1;
+    height: 90%;
+    width: 26%;
+    display: grid;
+    grid-template-columns: repeat(3,33.333%);
+    grid-template-rows: repeat(3,33.333%);
+
+}
 .img-vazia{
-    height: 100px;
-    width: 100px;
+    grid-area: 1/1/span 3/span 3;
+    height: 100%;
+    width: 100%;
+    border: 2px solid black;
+    border-radius: 50%;
+}
+.cam{
+    grid-area: 3/3;
+    height: 100%;
+    width: 100%;
+    .icone-foto{
+        height: 100%;
+        width: 100%;
+    }
+}
+.info-cad{
+    grid-area: 4/1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+.input-cad{
+    display: flex;
+    font-size: 20px;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+    
+    input{
+        border-radius: 10px 0px 10px 0px;
+        border: 2px solid rgba(102, 101, 101, 0.411);
+        padding: 10px;
+    }
+    input:focus{
+        outline: none;
+    }
+}
+.div-bot{
+    grid-area: 5/1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.bot{
+    width: 160px;
+    height: 40px;
+    background-color: black;
+    color: aliceblue;
+    font-size: medium;
+    border-radius: 10px 0px 10px 0px;
+    transition: 0.5s;
+}
+.link{
+    grid-area: 6/1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
 }
