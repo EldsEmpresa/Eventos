@@ -1,0 +1,348 @@
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+:root{
+    --tamanho-carrosel: 750px;
+}
+body{
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    scroll-behavior: smooth;
+}
+.navBar{
+    justify-items: center;
+    align-items: center;
+    display: grid;
+    grid-template-columns: 100px 50% 30% auto;
+    grid-template-rows: auto;
+    background-color: #0a0a0a;
+    height: 80px;
+    width: 100%;
+}      
+.logo{
+    grid-area: 1/1;
+    height: 50px;
+    width: 50px;
+}
+.bot{
+    grid-area: 1/3;
+    display: flex;
+    flex-direction: row;
+
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    color: white;
+    gap: 40px;
+}
+.bot2{
+    border: 2px solid #ffffff;
+    border-radius: 5px;
+    padding: 6px;
+    transition: 0.5s;
+}
+.teste{
+    height: 50px;
+    width: 52px;
+    border-radius: 50%;
+}
+.cliente{
+    grid-area: 1/4;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+}
+.link{
+    text-decoration: none;
+    font-size: 18px;
+    color: #ffffff;
+}
+.li{
+    background-color: #ffffff;
+    height: 2px;
+    width: 0%;
+    transition: width 0.5s;
+}
+.link:hover .li{
+    width: 100%;
+}
+.corpo{
+    display: grid;
+    grid-template-columns: auto 75% auto;
+    grid-template-rows: auto;
+    
+    width: 100%;
+    height: var(--tamanho-carrosel);
+}
+.ladoL{ 
+    grid-area:1/1 ;
+    background: linear-gradient(to right,#0a0a0a, #222222);
+}
+.ladoL1{
+    grid-area: 1/1;
+    background: linear-gradient(to top,#000000,#000000c4,#0000008f,#00000056,#00000000);
+}
+.ladoR{ 
+    grid-area:1/3 ;
+    background: linear-gradient(to left,#0a0a0a, #222222);
+}
+.ladoR1{
+    grid-area: 1/3;
+    background: linear-gradient(to top,#000000,#000000c4,#0000008f,#00000056,#00000000);
+}
+.carrosel{
+    grid-area: 1/2;
+    width: 100%;
+    height: var(--tamanho-carrosel);
+    overflow: hidden;
+}        
+.imagens{
+    width: 400%;
+    height: var(--tamanho-carrosel);
+    display: flex;
+    flex-direction: row;
+}
+.corpo input{
+    display: none;
+}
+.img{
+    width: 25%;
+    position: relative;
+    transition: 2s;
+}
+.corpo img{
+    width: 100%;
+    height: var(--tamanho-carrosel);;
+}
+.troca-manual{
+    position: absolute;
+    display: grid;
+    grid-template-columns: repeat(4,auto);
+    grid-template-rows: repeat(3,auto);
+    justify-items: center;
+    align-items: center;
+    width: 75%;
+    height: var(--tamanho-carrosel);;
+}                
+.posi{
+    grid-area: 3/4;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+.btn-m{
+    width: 12px;
+    height: 12px;
+    grid-area: 1/1;
+    border: 2px solid #ffffff;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: 1s;
+}
+.btn-m:hover{
+    background-color: #ffffff;
+}
+.trocar{
+    position: absolute;
+    display: grid;
+    grid-template-columns: repeat(4,auto);
+    grid-template-rows: repeat(3,auto);
+    justify-items: center;
+    align-items: center;
+    width: 75%;
+    height: var(--tamanho-carrosel);
+    background: linear-gradient(to top,#000000,#000000c4,#0000008f,#00000056,#00000000);
+}
+.posi-1{
+    grid-area: 2/1;
+    margin-left: -35%;
+    margin-bottom: -50%;
+}
+.corpo p{
+    position: absolute;
+    font-size: 30px;
+    color: #ffffff;
+    opacity: 0;
+    transition: 0.5s;
+}
+.posi-2{
+    grid-area: 3/1;
+    margin-left: -20%;
+    margin-bottom: 30%;
+}
+.corpo textarea{
+    background-color: #00000000;
+    border: none;
+    display: block;
+    resize: none;
+    text-align: start;
+    position: absolute;
+
+    font-size: 18px;
+    color: #ffffff;
+    width: 400px;
+    height: 100px;
+    opacity: 0;
+    transition: 0.5s;
+}
+#rd1:checked ~ .trocar .posi-1 .titulo-1{
+    opacity: 1;
+}
+#rd2:checked ~ .trocar .posi-1 .titulo-2{
+    opacity: 1;
+}
+#rd3:checked ~ .trocar .posi-1 .titulo-3{
+    opacity: 1;
+}
+
+#rd1:checked ~ .trocar .posi-2 #txt1{
+    opacity: 1;
+}
+#rd2:checked ~ .trocar .posi-2 #txt2{
+    opacity: 1;
+}
+#rd3:checked ~ .trocar .posi-2 #txt3{
+    opacity: 1;
+}
+
+#rd1:checked ~ .troca-manual .posi #one{
+    background-color: #ffffff;
+}
+#rd2:checked ~ .troca-manual .posi #two{
+    background-color: #ffffff;
+}
+#rd3:checked ~ .troca-manual .posi #trhee{
+    background-color: #ffffff;
+}
+
+#rd1:checked ~ .on{
+    margin-left: 0%;
+}
+#rd2:checked ~ .on{
+    margin-left: -25%;
+}
+#rd3:checked ~ .on{
+    margin-left: -50%;
+}
+.info{
+    height: 800px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 4% 48% 48%;
+    justify-items: center;
+    align-items: center;
+    background-color: #dfdfdf;
+}
+.preto{
+    grid-area: 1/1/span 1/span 2;
+    background-color: #000000;
+    height: 100%;
+    width: 100%;
+}
+#campo1{
+    grid-area: 2/1;
+    height: 30%;
+    width: 70%;
+}
+.titulo-sobre{
+    margin: 0px 0px 20px -20px;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.sobre{
+    height: 100%;
+    width: 100%;
+    font-size: 16px;
+    word-wrap: break-word;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#campo2{
+    grid-area: 2/2;
+    height: 80%;
+    width: 60%;
+}
+.edifi{
+    height: 100%;
+    width: 100%;
+}
+#campo3{
+    grid-area: 3/1;
+    height: 70%;
+    width: 70%;
+
+}
+.mapa{
+    height: 100%;
+    width: 100%;
+}
+#campo4{
+    grid-area: 3/2;
+    height: 30%;
+    width: 70%;
+}
+.localização{
+    margin: 0px 0px 20px -20px;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.info-rua{
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.foot{
+    width: 100%;
+    height: 160px;
+    background-color: #000000;
+    display: grid;
+    grid-template-rows: 80% 1% 19%;
+    grid-template-columns: repeat(33,33%);
+    justify-items: center;
+    align-items: center;
+}
+.titulos{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+.foot p{
+    margin: 3px;
+    font-family: 'Courier New', Courier, monospace;
+    color: #ffffff;
+}
+.parcerias{
+    grid-area: 1/1;
+    width: 100%;
+    margin: 10px;
+    color: #ffffff;
+}
+.contatos{
+    grid-area: 1/2;
+    width: 100%;
+    margin: 10px;
+    color: #ffffff;
+}
+.redes{
+    grid-area: 1/3;
+    width: 100%;
+    margin: 10px;
+    color: #ffffff;
+}
+.foot hr{
+    justify-self: normal;
+    background-color: #ffffff;
+    grid-area: 2/1/span 1/span 3;
+}
+.copy{
+    grid-area: 3/2;
+    color: #ffffff;
+}

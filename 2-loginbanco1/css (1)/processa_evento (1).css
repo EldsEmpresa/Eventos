@@ -1,0 +1,129 @@
+/* Resetando configurações padrões */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #f0f4ff, #dce3f7); /* Gradiente suave */
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Container centralizado com a mensagem */
+.container {
+    background-color: white;
+    padding: 2.5rem 3rem;
+    border-radius: 20px; /* Bordas mais arredondadas */
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1); /* Sombras mais sutis e intensas */
+    text-align: center;
+    max-width: 600px;
+    width: 100%;
+    transition: transform 0.3s ease; /* Efeito de zoom suave */
+}
+
+.container:hover {
+    transform: translateY(-10px); /* Efeito de elevação quando passar o mouse */
+}
+
+/* Título principal */
+h1 {
+    color: #2c3e50;
+    font-size: 2.2rem; /* Tamanho maior para o título */
+    font-weight: 600;
+    margin-bottom: 1rem;
+    text-align: center; /* Centralizando o título */
+}
+
+/* Texto adicional */
+p {
+    color: #555;
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    line-height: 1.5;
+    text-align: center; /* Centralizando o texto adicional */
+}
+
+/* Pergunta mais amigável */
+.question {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #333;
+    margin: 1.5rem 0;
+    text-align: center; /* Centralizando a pergunta */
+    font-style: italic; /* Deixa o texto mais suave e amigável */
+}
+
+/* Bloco de links de ação */
+.actions {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column; /* Centralizando os links na coluna */
+    justify-content: center;
+    align-items: center; /* Alinhando os links ao centro */
+}
+
+/* Estilo para os botões de ação */
+a {
+    display: inline-block;
+    margin: 1rem 0.8rem;
+    padding: 0.8rem 1.8rem;
+    border-radius: 8px;
+    text-decoration: none;
+    color: white;
+    background-color: #3498db; /* Cor de fundo agradável */
+    font-size: 1.1rem;
+    font-weight: 500;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+a:hover {
+    background-color: #2980b9; /* Cor mais escura ao passar o mouse */
+    transform: translateY(-3px); /* Efeito de elevação */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+a:active {
+    transform: translateY(1px); /* Reforçando o efeito de clique */
+}
+
+a:focus {
+    outline: none; /* Remover o contorno padrão */
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.6); /* Adicionando sombra ao focar no link */
+}
+
+/* Ícones para os botões */
+a i {
+    margin-right: 8px; /* Espaço entre o ícone e o texto */
+    font-size: 1.2rem; /* Tamanho do ícone */
+}
+
+/* Responsividade para telas pequenas */
+@media (max-width: 600px) {
+    .container {
+        padding: 1.5rem 2rem;
+    }
+
+    h1 {
+        font-size: 1.8rem; /* Ajustando o tamanho do título em telas pequenas */
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    a {
+        padding: 0.6rem 1.4rem; /* Ajustando o tamanho do botão */
+        font-size: 1rem; /* Tamanho de fonte mais adequado para dispositivos menores */
+    }
+}

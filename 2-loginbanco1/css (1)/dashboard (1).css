@@ -1,0 +1,54 @@
+/* dashboard.css */
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f4f6f8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  background-color: #ffffff;
+  padding: 30px 40px;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 400px;
+}
+
+h2 {
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.botoes {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.botao {
+  display: block;
+  padding: 12px;
+  background-color: #007bff;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+}
+
+.botao:hover {
+  background-color: #0056b3;
+}
+
+.botao.sair {
+  background-color: #dc3545;
+}
+
+.botao.sair:hover {
+  background-color: #b52a37;
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tela Cadastro</title>
+    <script src="valida.js"></script>  <!-- Incluindo o arquivo de validação -->
+    <link rel="stylesheet" href="style.css"> <!-- Linkando o arquivo CSS -->
+</head>
+<body>
+
+    <!-- Formulário de cadastro -->
+    <form action="script1.php" method="POST" enctype="multipart/form-data" onsubmit="return validarFormulario()"> <!-- Incluindo enctype para upload de arquivo -->
+        <p><label>Digite seu nome:</label></p> 
+        <input type="text" id="nome_id" name="nome" placeholder="Digite aqui seu nome....">
+
+        <p><label>Digite sua idade:</label></p>
+        <input type="number" id="_id" name="idade" placeholder="Digite aqui sua idade....">
+
+        <p><label>Digite seu email:</label></p>
+        <input type="text" id="email_id" name="email" placeholder="Digite aqui seu email....">
+
+        <!-- Campo para upload de foto -->
+        <p><label>Selecione sua foto:</label></p>
+        <input type="file" id="foto_id" name="foto" accept="image/*" onchange="previewFoto()">
+
+        <!-- Área para mostrar a foto em uma moldura -->
+        <div id="foto_preview" class="foto-moldura">
+            <p>Pré-visualize sua foto aqui</p>
+        </div>
+
+        <p><input type="submit" value="Enviar"></p>
+    </form>
+
+</body>
+</html>
